@@ -3,18 +3,25 @@
 int
 main ()
 {
-  struct arbol un_arbol;
-  struct arbol subarbol1;
-  subarbol1.dato = 10;
-  subarbol1.derecho = NULL;
-  subarbol1.izquierdo = NULL;
-  un_arbol.dato = 2;
-  un_arbol.derecho = NULL;
-  un_arbol.izquierdo = NULL;
-
-  un_arbol.derecho = &subarbol1;
-  mostrar (&un_arbol);
-printf(" %d ", buscar(&un_arbol,10));
-
+  struct arbol *un_arbol=NULL;
+  int dato=0;
+  int dato1=0;
+  int dato2=0;
+  int busq=0;
+  /*printf("\nIntroduzca un numerito: ");
+  scanf("%d",&dato);
+  printf("---------------");
+  insertar(&un_arbol,dato);
+  printf("\nIntroduzca un numerito: ");
+  scanf("%d",&dato1);
+  insertar(&un_arbol,dato1);
+  printf("\nIntroduzca un numerito: ");
+  scanf("%d",&dato2);
+  insertar(&un_arbol,dato2);*/
+  mostrar (un_arbol);
+  printf("\nDato a buscar: ");
+  scanf("%d",&busq);
+  printf ("\n %d ", buscar(un_arbol,busq));
+  getch();
   return 0;
 }
